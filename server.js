@@ -51,7 +51,7 @@ server.get('/weather', (req, res) => {
         }
         
         res.send(forcastArr);
-    } catch {
-        res.send('error');
+    } catch(error) {
+        res.status(500).send('Sorry, cant find that');
     }
 })
