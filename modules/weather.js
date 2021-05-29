@@ -18,10 +18,10 @@ function weatherhandler(req, res) {
     // let lat = req.query.lat;
     // let long = req.query.long;
     // let e = true;
-    if (inmemory[city] !== undefined) {
-        console.log('get the data from the weatherhandler Memory');
-        res.send(inmemory[city]);
-    } else {
+    // if (inmemory[city] !== undefined) {
+    //     console.log('get the data from the weatherhandler Memory');
+    //     res.send(inmemory[city]);
+    // } else {
         console.log('get the data from the weatherhandler API');
 
         let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${key}`;
@@ -45,4 +45,4 @@ function weatherhandler(req, res) {
     }
 
 
-}
+// }
